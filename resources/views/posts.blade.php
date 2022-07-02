@@ -5,7 +5,7 @@
 
 <body>
     <article>
-        <h1><a href="/post">My First Post</h1></a>
+        <h1><a href="/posts/first-post">My First Post</h1></a>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cupiditate at esse velit adipisci explicabo
             praesentium alias nisi voluptas est nesciunt omnis saepe, numquam inventore maxime, ipsum iure quisquam
             earum. Dolorum maiores officia quibusdam exercitationem possimus, dolorem voluptas quisquam laborum
