@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+
+    // To prevent mass assignment entirely, set guarded to an empty array
+
+    protected $fillable = ['title', 'exerpt', 'body'];
 }
