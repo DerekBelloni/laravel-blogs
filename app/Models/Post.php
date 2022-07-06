@@ -11,5 +11,5 @@ class Post extends Model
 
     // To prevent mass assignment entirely, set guarded to an empty array
 
-    protected $fillable = ['title', 'exerpt', 'body'];
+    protected $fillable = ['title', 'exerpt', 'body', 'slug', 'category_id'];
 }
