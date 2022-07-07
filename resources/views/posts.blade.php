@@ -8,11 +8,11 @@
             </h1>
 
             <p>
-                <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
+                By John Doe in <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
             </p>
 
             <div>
-                {{ $post->exerpt }}
+                {{ $post->excerpt }}
             </div>
         </article>
     @endforeach

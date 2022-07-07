@@ -11,11 +11,16 @@ class Post extends Model
 
     // To prevent mass assignment entirely, set guarded to an empty array
 
-    protected $fillable = ['title', 'exerpt', 'body', 'slug', 'category_id'];
+    protected $guarded = [];
 
     public function category()
     {
         // hasOne, hasMany, belongsTo, belongsToMany
         return $this->belongsTo(Category::class);
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
