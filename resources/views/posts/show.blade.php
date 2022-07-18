@@ -49,26 +49,11 @@
                         {!! $post->body !!}
                     </div>
                 </div>
-                <section class="col-span-8 col-start-5">
-                    <article class="flex">
-                        <div>
-                            <img src="https://i.pravatar.cc/400" alt="">
-                        </div>
-                        <div>
-                            <header>
-                                <h3 class="font-bold">
-                                    Rucksin Sinclair
-                                </h3>
-                                <p class="text-xs">
-                                    <time>Posted 8 months ago</time>
-                                </p>
-                            </header>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quos ipsam expedita
-                                sequi quasi natus minus, enim harum! Voluptatibus blanditiis nesciunt, ullam rerum
-                                doloribus, voluptas alias deserunt pariatur asperiores tenetur reprehenderit nisi, nulla
-                                quam accusantium dolorem dolores totam dicta?</p>
-                        </div>
-                    </article>
+                <section class="col-span-8 col-start-5 mt-10 space-y-6">
+                    <x-post-comment />
+                    <x-post-comment />
+                    <x-post-comment />
+                    <x-post-comment />
                 </section>
             </article>
         </main>
