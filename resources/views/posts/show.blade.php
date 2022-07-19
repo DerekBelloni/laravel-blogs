@@ -50,6 +50,25 @@
                     </div>
                 </div>
                 <section class="col-span-8 col-start-5 mt-10 space-y-6">
+                    <x-panel>
+                        <form method="POST" action="/posts/{{ $post->slug }}/comments">
+                            @csrf
+                            <header class="flex items-center">
+                                <img class="rounded-full " src="https://i.pravatar.cc/100?u={{ auth()->id() }}"
+                                    alt="" width="60" height="60">
+                                <h2 class="ml-4">Want to participate?</h2>
+
+                            </header>
+                            <div class="mt-6">
+                                <textarea name="body" class="w-full text-sm focus:outline-none focus:ring" rows="5"
+                                    placeholder="Quick, think of something to say!"></textarea>
+                            </div>
+                            <div class="flex justify-end mt-6 pt-6 border-t border-gray-200">
+                                <button type="submit"
+                                    class="bg-blue-500 text-white font-semibold rounded-2xl uppercase text-xs px-3 py-2 px-10 mt-2 hover:bg-blue-600 ">Post</button>
+                            </div>
+                        </form>
+                    </x-panel>
                     @foreach ($post->comments as $comment)
                         <x-post-comment :comment="$comment" />
                     @endforeach
