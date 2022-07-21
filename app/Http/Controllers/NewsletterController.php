@@ -10,7 +10,7 @@ use Illuminate\Validation\ValidationException;
 
 class NewsletterController extends Controller
 {
-    public function __invoke(MailchimpNewsletter $newsletter)
+    public function __invoke(Newsletter $newsletter)
     {
 
         request()->validate(['email' => 'required|email']);
