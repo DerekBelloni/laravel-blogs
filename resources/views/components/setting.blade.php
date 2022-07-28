@@ -4,11 +4,15 @@
 
     <div class="flex">
         <aside class="w-48">
-            <h4 class="font-semibold mb-6">Links</h4>
+            <h4 class="font-semibold mb-4">Links</h4>
             <ul>
                 <li>
-                    <a href="/admin/posts/create">New Post</a>
-                    <a href="/admin/posts/dashboard">User Dashboard</a>
+                    <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'text-blue' : '' }}">New
+                        Post</a>
+                </li>
+                <li>
+                    <a href="/admin/posts/dashboard" class="{{ request()->is('admin/posts/dashboard') }}">User
+                        Dashboard</a>
                 </li>
             </ul>
         </aside>
