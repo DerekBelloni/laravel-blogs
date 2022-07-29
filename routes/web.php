@@ -26,6 +26,8 @@ Route::post('posts/{post:slug}/comments', [PostCommentsController::class, 'store
 
 Route::post('/newsletter', NewsletterController::class);
 
+Route::get('admin/posts', [AdminPostController::class, 'index'])->middleware('admin');
+
 Route::get('/admin/posts/dashboard', [AdminController::class, 'index'])->middleware('admin');
 
 Route::get('register', [RegistrationController::class, 'create'])->middleware('guest');
