@@ -12,6 +12,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostsController;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\NewsletterController;
 use Illuminate\Validation\ValidationException;
 use App\Http\Controllers\PostCommentsController;
@@ -28,7 +29,7 @@ Route::post('/newsletter', NewsletterController::class);
 
 Route::get('admin/posts', [AdminPostController::class, 'index'])->middleware('admin');
 
-Route::get('/admin/posts/dashboard', [AdminController::class, 'index'])->middleware('admin');
+Route::get('/admin/posts/dashboard', [AdminPostController::class, 'show'])->middleware('admin');
 
 Route::get('register', [RegistrationController::class, 'create'])->middleware('guest');
 Route::post('register', [RegistrationController::class, 'store'])->middleware('guest');
