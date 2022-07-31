@@ -21,15 +21,11 @@ use App\Http\Controllers\RegistrationController;
 
 
 Route::get('/', [PostsController::class, 'index'])->name('home');
-
 Route::get('/posts/{post:slug}', [PostsController::class, 'show']);
+
 Route::post('posts/{post:slug}/comments', [PostCommentsController::class, 'store']);
 
 Route::post('/newsletter', NewsletterController::class);
-
-Route::get('admin/posts', [AdminPostController::class, 'index'])->middleware('admin');
-
-Route::get('/admin/posts/dashboard', [AdminPostController::class, 'show'])->middleware('admin');
 
 Route::get('register', [RegistrationController::class, 'create'])->middleware('guest');
 Route::post('register', [RegistrationController::class, 'store'])->middleware('guest');
@@ -39,5 +35,9 @@ Route::post('sessions', [SessionsController::class, 'store'])->middleware('guest
 
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
-Route::get('admin/posts/create', [PostsController::class, 'create'])->middleware('admin');
-Route::post('admin/posts', [PostsController::class, 'store'])->middleware('admin');
+// Admin
+Route::get('admin/posts/create', [AdminPostsController::class, 'create'])->middleware('admin');
+Route::post('admin/posts', [AdminPostsController::class, 'store'])->middleware('admin');
+Route::get('admin/posts', [AdminPostController::class, 'index'])->middleware('admin');
+Route::get('/admin/posts/user-posts', [AdminPostController::class, 'show'])->middleware('admin');
+Route::get('/admin/posts/{post}/edit', [AdminPostController::class, 'edit'])->middleware('admin');

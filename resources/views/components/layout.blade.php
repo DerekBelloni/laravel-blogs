@@ -28,7 +28,8 @@
                             <button class="text-xs z-100 font-bold uppercase">Welcome {{ auth()->user()->name }}!</button>
                         </x-slot>
                         <x-dropdown-item href="/admin/posts/create" :active="request()->is('admin/posts/create')">New Post</x-dropdown-item>
-                        <x-dropdown-item href="/admin/posts/dashboard" :active="request()->is('admin/posts/dashboard')">Dashboard</x-dropdown-item>
+                        <x-dropdown-item href="/admin/posts" :active="request()->is('admin/posts')">All Posts</x-dropdown-item>
+                        <x-dropdown-item href="/admin/posts/user-posts" :active="request()->is('admin/posts/user-posts')">User Posts</x-dropdown-item>
                         <x-dropdown-item href="#" x-data="{}"
                             @click.prevent="document.querySelector('#logout-form').submit()">Log Out
                         </x-dropdown-item>
