@@ -11,6 +11,9 @@
                         Post</a>
                 </li>
                 <li>
+                    <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'text-blue' : '' }}">All Posts</a>
+                </li>
+                <li>
                     <a href="/admin/posts/dashboard" class="{{ request()->is('admin/posts/dashboard') }}">User
                         Dashboard</a>
                 </li>
